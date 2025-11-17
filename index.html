@@ -1,11 +1,274 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Naveen Portfolio</title>
-</head>
-<body>
-    <h1>Naveen Kayakokula</h1>
-    <p>Welcome to my portfolio!</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveen Kayakokula – Data Analyst Portfolio</title>
 
-    <img src="WhatsApp Image 2025-11-15 at 16.09.44_d5913b25.jpg" width="200">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * { transition: 0.3s ease; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d252a;
+      color: #e0e1dd;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1b263b, #415a77);
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 { font-size: 3.5rem; margin: 0; font-weight: 700; }
+    header p { font-size: 1.3rem; opacity: 0.9; }
+
+    .social-icons img {
+      width: 40px;
+      margin: 0 10px;
+      filter: brightness(160%);
+    }
+    .social-icons img:hover { transform: scale(1.2); }
+
+    /* NAV */
+    nav {
+      background: #1b263b;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav ul { display: flex; justify-content: center; gap: 40px; list-style: none; padding: 0; margin: 0; }
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: #415a77;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    nav a:hover { background: #778da9; color: black; }
+
+    /* BASE SECTION */
+    .section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    /* ABOUT */
+    .about {
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap; text-align: center;
+    }
+    .about img {
+      width: 260px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+    .about p { max-width: 500px; font-size: 1.2rem; line-height: 1.6; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+    .skill-box {
+      background: #1b263b;
+      padding: 25px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.15);
+    }
+    .skill-box:hover { background: #415a77; transform: scale(1.1); }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #1b263b;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(255,255,255,0.15);
+    }
+    .card:hover { background: #415a77; transform: scale(1.05); }
+    .card button {
+      background: #15895c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .card button:hover { background: white; color: black; }
+
+    /* CONTACT */
+    .contact-box {
+      background: #1b263b;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header data-aos="fade-down">
+  <h1>NAVEEN KAYAKOKULA</h1>
+  <p>DATA ANALYST</p>
+
+  <div class="social-icons">
+    <a href="https://github.com/Naveen112004" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
+    </a>
+
+    <a href="https://www.linkedin.com/in/naveen-kayakokula-9b1a7b298/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png">
+    </a>
+
+    <a href="mailto:naveenkayakokula@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+    </a>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT -->
+<div id="about" class="section" data-aos="fade-up">
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+    <p>
+      Hello! I am Naveen Kayakokula, a passionate Data Analyst who solves real-world problems
+      using SQL, Excel, Power BI, and professional visualizations. Also skilled in Java and
+      programming logic. I love creating clean dashboards, analyzing datasets, and improving business decisions.
+    </p>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section" data-aos="zoom-in">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-box">Java</div>
+    <div class="skill-box">SQL</div>
+    <div class="skill-box">Excel</div>
+    <div class="skill-box">Power BI</div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- PROJECTS -->
+<div id="projects" class="section" data-aos="fade-up">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <!-- PROJECT 1 -->
+    <div class="card">
+      <h3>Employee Attrition Analysis (SQL)</h3>
+      <p>SQL analysis using joins, window functions, aggregations & insights.</p>
+      <button onclick="window.location.href='https://github.com/Naveen112004/Bank-Management-System-Java'">View Project</button>
+    </div>
+
+    <div class="card">
+  <h3>Bank Management System (JAVA)</h3>
+  <p>Loops, arrays, OOP, patterns and coding challenges.</p>
+  <button onclick="window.location.href='https://github.com/Naveen112004/Bank-Management-System-Java'">
+    View Project
+  </button>
+</div>
+
+
+  </div>
+
+  <!-- ⭐ ADD NEW PROJECT BUTTON ⭐ -->
+  <div style="text-align:center; margin-top:25px;">
+    <button 
+      style="
+        padding:15px 25px;
+        background:#778da9;
+        border:none;
+        border-radius:10px;
+        color:white;
+        font-size:1.1rem;
+        cursor:pointer;
+      "
+      onclick="alert('To add a new project:\n\n1. Go to index.html file\n2. Copy the project card template\n3. Fill details and paste below existing projects.\n\nThis button is only a visual element.')"
+    >
+      ➕ Add New Project
+    </button>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- CONTACT -->
+<div id="contact" class="section" data-aos="fade-up">
+  <h2>Contact Me</h2>
+
+  <div class="contact-box">
+    <p style="font-size:1.2rem;">You can reach me directly by email.</p>
+
+    <a href="mailto:naveenkayakokula@gmail.com" 
+       style="
+         display:inline-block;
+         padding:15px 30px;
+         background:#778da9;
+         color:white;
+         font-weight:bold;
+         border-radius:10px;
+         text-decoration:none;
+         font-size:1.1rem;">
+      📩 Email Me
+    </a>
+  </div>
+</div>
+
+<footer>© 2025 Naveen Kayakokula | All Rights Reserved.</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
+</html>
